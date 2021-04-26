@@ -1,0 +1,7 @@
+com/example/AmadeusHjw/feign/FeignConfiguration.class
+com/example/AmadeusHjw/controller/TestFeignController.class
+com/example/AmadeusHjw/feign/FeignClientFallback.class
+com/example/AmadeusHjw/StartApplication.class
+com/example/AmadeusHjw/config/MyLoadBalancerConfiguration.class
+com/example/AmadeusHjw/feign/FeignService.class
+com/example/AmadeusHjw/config/MySCLBConfiguration.class

@@ -1,0 +1,7 @@
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/feign/FeignConfiguration.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/feign/FeignService.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/config/MySCLBConfiguration.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/feign/FeignClientFallback.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/config/MyLoadBalancerConfiguration.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/StartApplication.java
+/Users/hjwjames/Documents/项目/springcloudALibaba/Module2/src/main/java/com/example/AmadeusHjw/controller/TestFeignController.java
