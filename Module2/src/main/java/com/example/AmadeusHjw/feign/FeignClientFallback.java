@@ -10,4 +10,9 @@ public class FeignClientFallback implements FeignService {
     public String notfound() {
         return "notFound fallback";
     }
+
+    @Override
+    public String getNacosConfig() {
+        return "notFound fallback";
+    }
 }

@@ -17,4 +17,8 @@ public class TestFeignController {
     public String notfound(){
         return feignClient.notfound();
     }
+    @GetMapping(value = "/getNacosConfig")
+    public String getNacosConfig(){
+        return feignClient.getNacosConfig();
+    }
 }

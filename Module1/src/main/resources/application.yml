@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
+    loadbalancer:
+      ribbon:
+        enabled: false
+feign:
+  sentinel:
+    enabled: true
+server:
+  port: 8008
+mysql: 3306
