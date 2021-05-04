@@ -12,7 +12,7 @@ feign:
   sentinel:
     enabled: true
 server:
-  port: 8004
+  port: 8009
   servlet:
-    context-path: /module1
+    context-path: /module2
 mysql: 3306

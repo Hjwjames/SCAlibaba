@@ -13,6 +13,7 @@
     <modules>
         <module>Module1</module>
         <module>Module2</module>
+        <module>GateWay</module>
     </modules>
 
 

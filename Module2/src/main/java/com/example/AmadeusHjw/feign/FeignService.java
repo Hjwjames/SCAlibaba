@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "amadeus-module1", fallback = FeignClientFallback.class,
         configuration = FeignConfiguration.class)
 public interface FeignService {
-    @GetMapping(value = "/test")
+    @GetMapping(value = "/module1/test")
     String test();
 
-    @GetMapping(value = "/notfound")
+    @GetMapping(value = "/module1/notfound")
     String notfound();
 
-    @GetMapping(value = "/getNacosConfig")
+    @GetMapping(value = "/module1/getNacosConfig")
     String getNacosConfig();
 }

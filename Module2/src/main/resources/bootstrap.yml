@@ -1,10 +1,10 @@
 spring:
   application:
-    name: amadeus-module1
+    name: amadeus-module2
   cloud:
     nacos:
       config:
         server-addr: 203.195.235.181:8848
         file-extension: yaml
   profiles:
-    active: env
+    active: dev
