@@ -13,6 +13,10 @@ public class TestFeignController {
     public String testFeign(){
         return feignClient.test();
     }
+    @GetMapping(value = "/oauth/testFeign/filter")
+    public String testFeignfilter2(){
+        return feignClient.test();
+    }
     @GetMapping(value = "/notfound")
     public String notfound(){
         return feignClient.notfound();

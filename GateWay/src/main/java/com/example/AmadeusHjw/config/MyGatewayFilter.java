@@ -1,12 +1,11 @@
 package com.example.AmadeusHjw.config;
 
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
-import org.springframework.http.HttpStatus;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -20,14 +19,17 @@ public class MyGatewayFilter implements GatewayFilter, Ordered{
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain)
     {
         String url = exchange.getRequest().getPath().pathWithinApplication().value();
+        String param = exchange.getRequest().getQueryParams().toString();
+        ServerHttpResponse response = exchange.getResponse();
+
         log.info("请求URL:" + url);
+        log.info("请求URL:" + exchange.getRequest().getURI());
         log.info("method:" + exchange.getRequest().getMethod());
 
+        exchange.getRequest().getPath();
+
         String secret = exchange.getRequest().getHeaders().getFirst("secret");
-//        if (StringUtils.isBlank(secret))
-//        {
-//            return chain.filter(exchange);
-//        }
+
 
         //获取param 请求参数
         String uname = exchange.getRequest().getQueryParams().getFirst("uname");
@@ -35,13 +37,6 @@ public class MyGatewayFilter implements GatewayFilter, Ordered{
         String userId = exchange.getRequest().getHeaders().getFirst("user-id");
         log.info("userId：" + userId);
 
-        /*if (StringUtils.isBlank(userId))
-        {
-            log.info("*****头部验证不通过，请在头部输入  user-id");
-            //终止请求，直接回应
-            exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
-            return exchange.getResponse().setComplete();
-        }*/
         return chain.filter(exchange);
     }
     @Override
