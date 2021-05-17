@@ -83,6 +83,8 @@ public class SCRMOauth2GatewayFilter implements GatewayFilter, Ordered {
 
     public String getUser(String code,ServerWebExchange exchange){
         //通过code从企业微信获取员工id
+        String uri ="https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code=CODE";
+        //httpPost(uri);
         return "Amadeus";
     }
 

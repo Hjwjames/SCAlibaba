@@ -7,17 +7,24 @@ spring:
         server-addr: 203.195.235.181:8848
     gateway:
       routes:
+        - id: oauth
+          uri: lb://amadeus-module2
+          predicates:
+            - Path=/module2/oauth/**
+          filters:
+            - My=My
         - id: amadeus-module2
           uri: lb://amadeus-module2
           predicates:
             - Path=/module2/**
-          filters:
-            - Post=Post
-            #自定义过滤器的名字为，GatewayFilterFactory前面的字符，比如 TokenGatewayFilterFactory，那么过滤器名字是 Token
         - id: amadeus-module1
           uri: lb://amadeus-module1
           predicates:
             - Path=/module1/**
+        - id: baidu
+          uri: http://www.baidu.com/
+          predicates:
+            - Path=/baidu/**
       globalcors:
         cors-configurations:
           '[/**]':
@@ -31,5 +38,5 @@ spring:
               - PUT
               - OPTION
 server:
-  port: 9004
+port: 9004
 mysql: 3306
